@@ -7,6 +7,7 @@ function calculate(value) {
     // debugger
     if (Number.isNaN(numberA) || Number.isNaN(numberB) || operator === null) {
         updateResult('Operator does not recognized')
+        return
     }
     else {
         const calculator = new Calculator();
