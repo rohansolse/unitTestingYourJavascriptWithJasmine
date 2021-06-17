@@ -80,4 +80,26 @@ describe('calculator.js', function () {
     expect(function () { calculator.divide(0) }).toThrowError(Error, "Cannot divide by zero")
   });
 
+  it("shoud match number", function () {
+    const calculator = new Calculator();
+    calculator.total = 20
+    expect(calculator.add(50)).toMatch(/-?\d+/)
+    expect(typeof calculator.total).toMatch('number')
+  });
+
+  it("shoud match anything", function () {
+    const calculator = new Calculator();
+    calculator.total = 20
+    expect(calculator.total).toEqual(jasmine.anything())
+    expect([]).toEqual(jasmine.anything())
+    expect(function () { [] }).toEqual(jasmine.anything())
+    // expect(null).toEqual(jasmine.anything())
+    // expect(undefined).toEqual(jasmine.anything())
+  });
+
+  it("shoud custom matchers", function () {
+    const calculator = new Calculator();
+    calculator.total = 20
+    expect(calculator.total).toBeNumber()
+  });
 })
