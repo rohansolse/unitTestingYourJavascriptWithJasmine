@@ -21,7 +21,7 @@ function calculate(inputValue) {
   calculator.add(numberA);
 
   let result;
-  switch(operation[0]) {
+  switch (operation[0]) {
     case '+':
       result = calculator.add(numberB);
       break;
@@ -51,4 +51,10 @@ function updateResult(result) {
   if (element) {
     element.innerText = result;
   }
+}
+
+function showVersion() {
+  const calculator = new Calculator()
+  const element = document.getElementById('version')
+  element.innerText = calculator.version
 }
