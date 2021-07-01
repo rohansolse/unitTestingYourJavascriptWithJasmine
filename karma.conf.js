@@ -18,6 +18,7 @@ module.exports = function (config) {
         reporters: ['dots', 'coverage'],
         color: true,
         singleRun: true,
+        browsers: ['ChromeHeadless'],
         coverageReporter: {
             dir: 'coverage/',
             reporters: [
