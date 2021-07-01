@@ -62,7 +62,7 @@ function showVersion() {
     .then(function (version) {
       element.innerText = version;
     })
-    .catch(function() {
-      element.innerText = 'unknown';
-    });
+  // .catch(function () {
+  //   element.innerText = 'unknown';
+  // });
 }
